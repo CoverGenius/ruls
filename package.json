@@ -1,6 +1,6 @@
 {
   "name": "ruls",
-  "version": "1.1.1",
+  "version": "1.1.1-local",
   "description": "Typesafe rules engine with JSON encoding",
   "keywords": [
     "typescript",
@@ -31,7 +31,6 @@
     "lint": "eslint src --fix",
     "format": "prettier --write src",
     "test": "jest src",
-    "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
   },

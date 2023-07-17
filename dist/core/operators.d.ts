@@ -1,0 +1,20 @@
+import type Rule from '../rules/rule';
+export type OperatorKey = keyof typeof operator;
+export declare const operator: {
+    $all<T>(first: T[], second: T[]): boolean;
+    $and<T_1>(first: T_1[], second: Rule<T_1>[]): Promise<boolean>;
+    $any<T_2>(first: T_2[], second: T_2[]): boolean;
+    $eq<T_3>(first: T_3, second: T_3): boolean;
+    $gt<T_4 extends number>(first: T_4, second: T_4): boolean;
+    $gte<T_5 extends number>(first: T_5, second: T_5): boolean;
+    $in<T_6>(first: T_6, second: T_6[]): boolean;
+    $inc<T_7 extends string>(first: T_7, second: T_7): boolean;
+    $lt<T_8 extends number>(first: T_8, second: T_8): boolean;
+    $lte<T_9 extends number>(first: T_9, second: T_9): boolean;
+    $not<T_10 extends boolean>(value: T_10): boolean;
+    $or<T_11>(first: T_11[], second: Rule<T_11>[]): Promise<boolean>;
+    $pfx<T_12 extends string>(first: T_12, second: T_12): boolean;
+    $rx<T_13 extends string>(first: T_13, second: RegExp): boolean;
+    $sfx<T_14 extends string>(first: T_14, second: T_14): boolean;
+};
+export declare function getOperatorKey<TFirst, TSecond>(fn: (first: TFirst, second: TSecond) => boolean | Promise<boolean>): OperatorKey;
